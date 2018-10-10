@@ -1,0 +1,18 @@
+{
+  "name": "fintend-wallet-service-cpb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "hot": "nodemon ethereum_cpb_test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ethereumjs-tx": "^1.3.7",
+    "nodemon": "^1.18.4",
+    "rxjs": "^6.3.3",
+    "web3": "^1.0.0-beta.36"
+  }
+}
