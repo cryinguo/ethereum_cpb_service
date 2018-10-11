@@ -49,7 +49,7 @@ class ethCpbService {
 
         let tx = new Tx(rawTx);
         tx.sign(Buffer.from(privateKey_, 'hex'));
-        var serializedTx = tx.serialize();
+        let serializedTx = tx.serialize();
         await this.web3.eth.sendSignedTransaction('0x' + serializedTx.toString('hex'), function (err, hash) {
             if (err) {
                 console.log(err);
@@ -63,7 +63,7 @@ class ethCpbService {
     getEvents() {
         this.cpb.events.allEvents(function(error, event){ 
             console.log('---------------event--------------\n', event); 
-            var observable = Rx.Observable.create(function (observer) {
+            let observable = Rx.Observable.create(function (observer) {
                 observer.next(event);
             })
         })
